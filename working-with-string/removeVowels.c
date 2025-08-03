@@ -20,6 +20,7 @@ char *disemvowel(const char *str)
 
   while (str[i] != '\0') i++; i++;
   char *newStr = malloc(i);
+  // Got the size of the actual string.
 
   for (int k = 0; k < i; k++) {
     if (!isVowel(getLower(str[k]))) {
@@ -27,14 +28,18 @@ char *disemvowel(const char *str)
       j++;
     }
   }
+  // Counted minimum memory we need.
+
   newStr[j-1] = '\0';
   newStr = realloc(newStr, j);
+  // Our wanted string in newStr, and the str, fuck off.
   return newStr;
 }
 
 
 bool isVowel(char letter)
 {
+  // Let's make everything as my own as possible.
   const char vowels[5] = { 'a', 'e', 'i', 'o', 'u' };
   for (int i = 0; i < 5; i++) {
     if (vowels[i] == letter) {
@@ -46,6 +51,7 @@ bool isVowel(char letter)
 
 
 char getLower(char letter) {
+  // Yes, I want to make this too.
   if (letter <= 'Z') {
     return letter + 32;
   }
