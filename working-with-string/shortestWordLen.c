@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-ssize_t find_short(const char *s)
+size_t find_short(const char *s)
 {
   size_t smallest = 256;
   size_t letterCount = 0;
