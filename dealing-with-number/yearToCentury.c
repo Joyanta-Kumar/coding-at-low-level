@@ -7,7 +7,11 @@ int getCentury(int year);
 
 int main()
 {
-  return 0;
+  int a = 1;
+  int b = 0;
+  int c = 10;
+  a = c / b;
+  printf("%d", a);
 }
 
 
